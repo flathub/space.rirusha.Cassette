@@ -3,50 +3,50 @@ runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
 sdk-extensions:
-- org.freedesktop.Sdk.Extension.vala
+  - org.freedesktop.Sdk.Extension.vala
 command: cassette
 finish-args:
-- --share=network
-- --share=ipc
-- --socket=fallback-x11
-- --device=dri
-- --socket=pulseaudio
-- --socket=wayland
-- --filesystem=xdg-music:ro
-- --filesystem=xdg-download:ro
-- --talk-name=org.mpris.MediaPlayer2.Player
+  - --share=network
+  - --share=ipc
+  - --socket=fallback-x11
+  - --device=dri
+  - --socket=pulseaudio
+  - --socket=wayland
+  - --filesystem=xdg-music:ro
+  - --filesystem=xdg-download:ro
+  - --talk-name=org.mpris.MediaPlayer2.Player
 build-options:
   append-path: /usr/lib/sdk/vala/bin
   prepend-ld-library-path: /usr/lib/sdk/vala/lib
 cleanup:
-- /include
-- /lib/pkgconfig
-- /man
-- /share/doc
-- /share/gtk-doc
-- /share/man
-- /share/pkgconfig
-- /share/vala
-- '*.la'
-- '*.a'
+  - /include
+  - /lib/pkgconfig
+  - /man
+  - /share/doc
+  - /share/gtk-doc
+  - /share/man
+  - /share/pkgconfig
+  - /share/vala
+  - '*.la'
+  - '*.a'
 modules:
-- name: blueprint-compiler
-  buildsystem: meson
-  cleanup:
-  - '*'
-  sources:
-  - type: git
-    url: https://gitlab.gnome.org/jwestman/blueprint-compiler
-    tag: v0.14.0
-    commit: 8e10fcf8692108b9d4ab78f41086c5d7773ef864
-- name: cassette
-  buildsystem: meson
-  builddir: true
-  sources:
-  - type: git
-    url: https://gitlab.gnome.org/Rirusha/Cassette.git
-    tag: ver-0.2.0
-    commit: 
-    x-checker-data:
-      tag-pattern: ^v([\d.]+)$
-      type: git
+  - name: blueprint-compiler
+    buildsystem: meson
+    cleanup:
+      - '*'
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler
+        tag: v0.14.0
+        commit: 8e10fcf8692108b9d4ab78f41086c5d7773ef864
+  - name: cassette
+    buildsystem: meson
+    builddir: true
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/Rirusha/Cassette.git
+        tag: v0.2.0
+        commit: 90e01c4491308637a657f0d388a9a77afeb3ebc7
+        x-checker-data:
+          tag-pattern: ^v([\d.]+)$
+          type: git

@@ -46,7 +46,7 @@ modules:
   - type: git
     url: https://gitlab.gnome.org/Rirusha/Cassette.git
     tag: v0.2.0
-    commit: 90e01c4491308637a657f0d388a9a77afeb3ebc7
+    commit: 5222dde49530b19a1158489787f2fc7b25d2634c
     x-checker-data:
       tag-pattern: ^v([\d.]+)$
       type: git

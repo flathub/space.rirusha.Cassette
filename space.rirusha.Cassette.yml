@@ -14,7 +14,7 @@ finish-args:
   - --socket=wayland
   - --filesystem=xdg-music:ro
   - --filesystem=xdg-download:ro
-  - --talk-name=org.mpris.MediaPlayer2.Player
+  - --own-name=org.mpris.MediaPlayer2.space.rirusha.Cassette
 build-options:
   append-path: /usr/lib/sdk/vala/bin
   prepend-ld-library-path: /usr/lib/sdk/vala/lib
@@ -45,8 +45,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/Rirusha/Cassette.git
-        tag: v0.2.0
-        commit: 34ab362ee028d5892ccd0c4bd30b5a9a58888f3e
+        tag: v0.2.1
+        commit: 6dec1c9403a67fd9482d6798f3a9f2c89909b4e8
         x-checker-data:
           tag-pattern: ^v([\d.]+)$
           type: git

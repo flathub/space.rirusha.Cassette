@@ -1,6 +1,6 @@
 id: space.rirusha.Cassette
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.vala
@@ -29,15 +29,6 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
-  - name: blueprint-compiler
-    buildsystem: meson
-    cleanup:
-      - '*'
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/jwestman/blueprint-compiler
-        tag: v0.14.0
-        commit: 8e10fcf8692108b9d4ab78f41086c5d7773ef864
   - name: cassette
     buildsystem: meson
     builddir: true

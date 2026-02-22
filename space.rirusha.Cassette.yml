@@ -2,8 +2,6 @@ id: space.rirusha.Cassette
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.vala
 command: cassette
 finish-args:
   - --share=network
@@ -14,20 +12,6 @@ finish-args:
   - --socket=wayland
   - --filesystem=xdg-music:ro
   - --filesystem=xdg-download:ro
-build-options:
-  append-path: /usr/lib/sdk/vala/bin
-  prepend-ld-library-path: /usr/lib/sdk/vala/lib
-cleanup:
-  - /include
-  - /lib/pkgconfig
-  - /man
-  - /share/doc
-  - /share/gtk-doc
-  - /share/man
-  - /share/pkgconfig
-  - /share/vala
-  - '*.la'
-  - '*.a'
 modules:
   - name: cassette
     buildsystem: meson

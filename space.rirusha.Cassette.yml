@@ -18,9 +18,9 @@ modules:
     builddir: true
     sources:
       - type: git
-        url: https://gitlab.gnome.org/Rirusha/Cassette.git
-        tag: v0.2.1.g49
-        commit: 2672bf3253523980bab77ba16e47b0d3f9efdb55
+        url: https://altlinux.space/rirusha/Cassette.git
+        tag: v0.2.2
+        commit: 406cd6577e9beed0c9059ccae36e1ce3a0b2921d
         x-checker-data:
-          tag-pattern: ^v([\d.]+)$
+          tag-pattern: ^v(\d+\.\d+\.\d+)$
           type: git

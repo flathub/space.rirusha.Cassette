@@ -19,8 +19,8 @@ modules:
     sources:
       - type: git
         url: https://altlinux.space/rirusha/Cassette.git
-        tag: v0.2.3
-        commit: 2cf40695d45c6e478513b2edcc43ea89de9803f3
+        tag: v0.2.4
+        commit: 9d34251d01bcd414ffbec2bef7931090d33c9124
         x-checker-data:
           tag-pattern: ^v(\d+\.\d+\.\d+)$
           type: git
